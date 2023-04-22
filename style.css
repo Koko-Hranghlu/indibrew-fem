@@ -1,0 +1,363 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap");
+:root {
+  --zaffre: #664efc;
+  --whitish: #fdfcf8;
+  --gray: #767676;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "DM Sans", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+.container {
+  width: min(90vw, 1024px);
+  margin: auto;
+}
+
+.br-3 {
+  border-radius: 3px;
+}
+
+.br-5 {
+  border-radius: 5px;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.whitish-bg {
+  background: var(--whitish);
+}
+
+.bluish-txt {
+  color: var(--zaffre);
+}
+
+.grayish-txt {
+  color: var(--gray);
+}
+
+.whitish-txt {
+  color: #d6d6d6;
+}
+
+.bold-txt {
+  font-weight: bold;
+}
+
+.primary-btn {
+  background: var(--zaffre);
+  color: white;
+  padding: 12px 14px;
+  border-radius: 3px;
+  border: none;
+  cursor: pointer;
+}
+
+body {
+  margin: 0;
+  line-height: 1.2;
+}
+
+.main-page header {
+  background-image: radial-gradient(at top left, #ebcbf7 0%, #f9e9ec 15%, #fdfcf9 30%);
+  min-height: 100vh;
+}
+
+header nav .container,
+.nav-links {
+  display: flex;
+  align-items: center;
+}
+
+header nav .container {
+  padding: 1rem 0;
+  justify-content: space-between;
+}
+header nav .container .nav-links {
+  gap: 1rem;
+}
+header nav .container .nav-links li a:not(.primary-btn) {
+  color: black;
+}
+header nav .container .hamburger-icon {
+  display: none;
+}
+
+header .hero {
+  display: flex;
+  align-items: center;
+  padding: 3rem 0;
+}
+header .hero > div {
+  flex-basis: 100%;
+}
+header .hero .hero-txt img {
+  display: block;
+  margin-top: 1rem;
+  width: 35%;
+}
+
+.feed {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 0;
+}
+
+.feed-1 .feed-text {
+  width: 50%;
+}
+.feed-1 .img-container {
+  width: 30%;
+}
+
+.feed-2 .img-container {
+  width: 40%;
+}
+.feed-2 .feed-text {
+  width: 50%;
+}
+
+footer div {
+  padding: 3rem 0;
+  display: grid;
+  grid-template-columns: 3fr repeat(4, 1fr);
+  gap: 4rem;
+}
+footer div .footer-links li {
+  margin-bottom: 5px;
+}
+footer div .footer-links li a {
+  color: var(--gray);
+}
+
+.sign-page {
+  background-color: #f9eef9;
+  min-height: 100vh;
+}
+
+.sign-page header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 0;
+}
+.sign-page header a {
+  color: black;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.sign-page header a button {
+  border: 1px solid #ccc;
+  width: 30px;
+  height: 30px;
+  display: inline-grid;
+  place-items: center;
+}
+.sign-page header a button img {
+  width: 8px;
+}
+
+.sign-page main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 0;
+}
+.sign-page main .sign-info {
+  width: 40%;
+}
+.sign-page main .sign-info ul li {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 1.2rem;
+  line-height: 1.4;
+}
+.sign-page main .sign-info ul li span {
+  font-size: 1.5rem;
+}
+.sign-page main form {
+  width: 50%;
+  padding: 2.5rem 2rem;
+  background: white;
+}
+.sign-page main form .form-control {
+  margin-top: 1.5rem;
+}
+.sign-page main form .form-control input:not(input[type=checkbox]) {
+  width: 100%;
+  border: 1px solid #ccc;
+  padding: 12px;
+  margin-top: 5px;
+}
+.sign-page main form .checkbox-label {
+  display: block;
+  margin-bottom: 1rem;
+  position: relative;
+  padding-left: 25px;
+}
+.sign-page main form .checkbox-label input {
+  display: none;
+}
+.sign-page main form .checkbox-label input:checked ~ .checkmark {
+  background: #0092ff;
+}
+.sign-page main form .checkbox-label input:checked ~ .checkmark:after {
+  display: inline-block;
+}
+.sign-page main form .checkbox-label .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 18px;
+  width: 18px;
+  border: 1px solid #ccc;
+  display: inline-grid;
+  place-items: center;
+}
+.sign-page main form .checkbox-label .checkmark:after {
+  content: "";
+  width: 3px;
+  height: 7px;
+  border: solid white;
+  border-width: 0 2.5px 2.5px 0;
+  transform: rotate(45deg) translateY(-1px);
+  display: none;
+}
+.sign-page main form .checkbox-label a {
+  text-decoration: 1.5px solid var(--zaffre) underline;
+  text-underline-offset: 3px;
+}
+
+@media (max-width: 768px) {
+  header .hero {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  header .hero .hero-txt {
+    order: 2;
+  }
+  header .hero .hero-txt img {
+    width: 20%;
+  }
+  header .hero .hero-img-container {
+    width: 50%;
+  }
+  .feed-1 .feed-text {
+    width: 60%;
+  }
+  .feed-1 .img-container {
+    width: 35%;
+  }
+  .feed-2 .img-container {
+    width: 25%;
+  }
+  .feed-2 .feed-text {
+    width: 70%;
+  }
+  footer div {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  footer div article:nth-child(1) {
+    grid-column: 1/3;
+    grid-row: 1/3;
+  }
+  .sign-page main {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .sign-page main .sign-info,
+  .sign-page main form {
+    width: 100%;
+  }
+}
+@media (max-width: 480px) {
+  .main-page header:before {
+    transform: translateX(-55%) translateY(-30%);
+  }
+  header nav .container {
+    flex-direction: column;
+    position: relative;
+  }
+  header nav .container .logo-container {
+    align-self: start;
+  }
+  header nav .container .nav-links {
+    max-height: 0;
+    overflow: hidden;
+    flex-direction: column;
+    transition: max-height 0.3s ease;
+  }
+  header nav .container .nav-links.active {
+    max-height: 300px;
+  }
+  header nav .container .hamburger-icon {
+    display: block;
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    top: 25px;
+  }
+  header .hero .hero-txt img {
+    width: 45%;
+  }
+  header .hero .hero-img-container {
+    width: 100%;
+  }
+  .feed {
+    flex-direction: column;
+  }
+  .feed .feed-text,
+  .feed .img-container {
+    width: 100%;
+  }
+  .feed .feed-text {
+    order: 2;
+  }
+  .feed .img-container {
+    margin-bottom: 2rem;
+  }
+  footer div {
+    grid-template-columns: 1fr;
+  }
+  .sign-page header a span {
+    display: none;
+  }
+}
+/*
+
+Main topics learned
+1. radial gradient
+2. text underline offset
+3. transitioning height values
+*/
+
+/*# sourceMappingURL=style.css.map */
